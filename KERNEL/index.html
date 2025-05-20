@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kernel Intro Animation</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400&display=swap">
+</head>
+<body>
+  <!-- контейнер для батареи-->
+  <div class="battery-container">
+    <object id="batterySvg" type="image/svg+xml" data="assets/contour_battery.svg"></object>
+    <div class="battery-percent" id="batteryPercent">0%</div>
+  </div>
+  <!-- верхняя и нижняя линии-->
+  <div class="line-top" id="chargingLineTop">
+    <object class="line-edge left" data="assets/left-top.svg"></object>
+    <object class="line-edge right" data="assets/right-top.svg"></object>
+  </div>
+  
+  <div class="line-bottom" id="chargingLineBottom">
+    <object class="line-edge left" data="assets/left-bottom.svg"></object>
+    <object class="line-edge right" data="assets/right-bottom.svg"></object>
+  </div>
+  <!--шапака с лого и двумя кнопками-->
+  <header id="header">
+    <div class="header-left">
+      <button class="line-btn" id="btnMenu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+    </div>
+    <div class="header-center">
+      <img src="assets/logo.svg" alt="Logo" class="header-logo">
+    </div>
+    <div class="header-right">
+      <button class="do-lacz-btn" id="btnDoLacz">DOŁĄCZ</button>
+    </div>
+  </header>
+  <!--горные слои с градиентом для параллакса-->
+  <div class="parallax-layer layer1">
+    <object id="mountain1" type="image/svg+xml" data="assets/Mountain1.svg"></object>
+    <object id="grad1" type="image/svg+xml" data="assets/grad1.svg"></object>
+  </div>
+  <div class="parallax-layer layer2">
+    <object id="mountain2" type="image/svg+xml" data="assets/Mountain2.svg"></object>
+    <object id="grad2" type="image/svg+xml" data="assets/grad2.svg"></object>
+  </div>
+  <!-- <div class="parallax-layer layer3">
+    <object id="mountain3" type="image/svg+xml" data="assets/Mountain3.svg"></object>
+    <object id="grad3" type="image/svg+xml" data="assets/grad3.svg"></object>
+  </div> -->
+
+  <!--final-text и KERNEL-->
+  <div class="final-content" id="finalContent">
+    <div class="final-text" id="finalText">
+      <p class="final-text-line line1">[ KOŁO NAUKOWE ]</p>
+      <p class="final-text-line line2">Oficjalna strona innowacji i badań</p>
+      <p class="final-text-line line3">YEAR: 2002</p>
+    </div>
+    <div class="kernel-text" id="kernelText">KERNEL</div>
+  </div>
+
+  <div class="content">
+    <h1>Основной контент страницы</h1>
+    <p>Здесь может быть текст и другие элементы для прокрутки.</p>
+    <p style="margin-top:4000px;">Конец страницы</p>
+  </div>
+
+
+  <div class="menu-overlay" id="menuOverlay">
+    <div class="menu-container">
+      <button class="menu-close">&times;</button>
+      <nav class="menu-content">
+        <!-- Добавьте ваши пункты меню из Figma -->
+        <a href="#" class="menu-item">// STRONA GŁÓWNA </a>
+        <a href="#" class="menu-item">// [O NAS]</a>
+        <a href="#" class="menu-item">// [KONTAKT]</a>
+        <!-- ... -->
+      </nav>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
